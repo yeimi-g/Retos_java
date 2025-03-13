@@ -98,19 +98,22 @@ function verificarPalindromo() {
     }
 }
 //Reto 10: Contador de Vocales
- function contarVocales(){
- 	let palabra_cont=prompt("ingrese la palabra a contar");
-  palabra_cont = palabra_cont.toLowerCase();
-   for (int i = 0; i < palabra.length(); i++) {
-     char letra = palabra.charAt(i);
-     if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
-       contadorVocales++;
-     }
-   }
-   console.log("La palabra \"" + palabra + "\" tiene " + contadorVocales + " vocal(es).")
-   let sum_voc="La palabra \"" + palabra + "\" tiene " + contadorVocales + " vocal(es).";
-   document.getElementById("resultado10").innerHTML = sum_voc;
- }
+function contarVocales() {
+  let palabra = prompt("Ingrese la palabra a contar");
+  palabra = palabra.toLowerCase();
+  let contadorVocales = 0;
+
+  for (let i = 0; i < palabra.length; i++) {
+    let letra = palabra.charAt(i);
+    if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+      contadorVocales++;
+    }
+  }
+
+  console.log(`La palabra "${palabra}" tiene ${contadorVocales} vocal(es).`);
+  let sum_voc = `La palabra "${palabra}" tiene ${contadorVocales} vocal(es).`;
+  document.getElementById("resultado10").innerHTML = sum_voc;
+}
 //llamas de las funciones
 //reto 1
 saludar();
